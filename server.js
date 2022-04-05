@@ -24,12 +24,13 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
-// your first API endpoint... 
+// Who Am I...
 app.get("/api/whoami", function (req, res) {
   res.json({
     'ipaddress':  req.headers['x-forwarded-for'],
+    'ip':         req.ip,
     'language':   req.headers['Accept-Language'],
-    'software':   req.headers['User-Agent']
+    'software':   req.headers['User-Agent'],
   });
 });
 
