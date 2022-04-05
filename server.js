@@ -28,8 +28,8 @@ app.get("/api/hello", function (req, res) {
 app.get("/api/whoami", function (req, res) {
   res.json({
     'ipaddress':  String(req.headers['x-forwarded-for']),
-    'language':   String(req.headers['accept-Language']),
-    'software':   String(req.headers['user-Agent']),
+    'language':   String(req.headers['Accept-Language']),
+    'software':   String(req.headers['User-Agent']),
   });
 });
 
