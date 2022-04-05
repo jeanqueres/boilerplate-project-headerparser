@@ -27,9 +27,9 @@ app.get("/api/hello", function (req, res) {
 // Who Am I...
 app.get("/api/whoami", function (req, res) {
   res.json({
-    'ipaddress':  req.headers['x-forwarded-for'],
-    'language':   req.headers['accept-Language'],
-    'software':   req.headers['user-Agent'],
+    'ipaddress':  String(req.headers['x-forwarded-for']),
+    'language':   String(req.headers['accept-Language']),
+    'software':   String(req.headers['user-Agent']),
   });
 });
 
